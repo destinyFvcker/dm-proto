@@ -1,0 +1,14 @@
+name: check proto compile
+on:
+    workflow_dispatch:
+    push:
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install Protoc
+              uses: arduino/setup-protoc@v3
+            - uses: dtolnay/rust-toolchain@nightly
+            - name: Build Check
+              run: cargo build -r

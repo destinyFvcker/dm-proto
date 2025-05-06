@@ -1,5 +1,5 @@
 [package]
-name = "dm-proto"
+name = "dm_proto"
 version = "0.1.0"
 authors = ["DeFv destinyfunk@163.com"]
 description = "data-mind's data protobuf def"
