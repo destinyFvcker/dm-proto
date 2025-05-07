@@ -5,14 +5,12 @@ package dm_proto.kafka_alarm;
 message GrafanaAlert {
   // 报警名称
   string alertname = 1;
-  // 对应股票(指数)代码
-  string code = 2;
   // alerts的valueString，用于概括报警状态
-  repeated string alerts = 3;
-  // 报警指纹，现场生成一个uuid
-  string fingerprint = 4;
+  repeated string alerts = 2;
+  // 报警指纹，现场生成一个uuid，同事作为broker message的key
+  string fingerprint = 3;
   // 发生了什么的简短总结以及原因
-  string summary = 5;
+  string summary = 4;
   // 警报规则的描述
-  string description = 6;
+  string description = 5;
 }

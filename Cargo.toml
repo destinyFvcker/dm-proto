@@ -9,6 +9,7 @@ edition = "2024"
 bytes = "1.10.1"
 prost = "0.13.5"
 prost-types = "0.13.5"
+serde = { version = "1.0.218", features = ["derive"] }
 
 [build-dependencies]
 prost-build = "0.13.5"
