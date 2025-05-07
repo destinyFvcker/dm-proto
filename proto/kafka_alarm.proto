@@ -2,14 +2,17 @@ syntax = "proto3";
 
 package dm_proto.kafka_alarm;
 
-// A snazzy new shirt!
-message Shirt {
-  enum Size {
-    SMALL = 0;
-    MEDIUM = 1;
-    LARGE = 2;
-  }
-
-  string color = 1;
-  Size size = 2;
+message GrafanaAlert {
+  // 报警名称
+  string alertname = 1;
+  // 对应股票(指数)代码
+  string code = 2;
+  // alerts的valueString，用于概括报警状态
+  repeated string alerts = 3;
+  // 报警指纹，现场生成一个uuid
+  string fingerprint = 4;
+  // 发生了什么的简短总结以及原因
+  string summary = 5;
+  // 警报规则的描述
+  string description = 6;
 }
